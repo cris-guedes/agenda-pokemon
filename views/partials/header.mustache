@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poke-Agenda</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" type="/image/png" href="/images/favicon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <div class="container">
+        <a class="home-link" href="/">Poke-Agenda</a>
+        <form method="GET" action="/search">
+            <input type="search" name="q" value="{{searchName}}" placeholder="Pesquise por nome" />
+        </form>
+    </div>
+</header>
+<nav>
+    
+        <div id="todos"><a class="menu todos" href="/">Todos</a></div>
+      
+        <form method="GET" action="/searchTipo">
+            {{#tipo}}
+                    <input class="menu" type="submit" name="q" value="{{.}}"/> 
+            {{/tipo}}  
+        
+        </form> 
+        
+    
+</nav>
+
+
+<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+  <a href="/api/save"><button type="button" class="btn btn-danger">Salvar {{alteracoes}} Alterações Premanentemente</button></a> 
+  <a href="/api/desfazer"><button type="button" class="btn btn-warning">Desfazer Alterações</button></a>
+  <a href="/create"> <button type="button" class="btn btn-success">Novo Pokemon </button></a>
+</div>

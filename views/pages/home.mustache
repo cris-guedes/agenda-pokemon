@@ -1,0 +1,34 @@
+{{> partials/header}}
+
+{{#searchTipo}}
+    <h2>{{searchTipo}} </h2>
+{{/searchTipo}}
+<div class="container list">
+{{#pokemons}}
+    <div class="item">
+        <img src="images/{{image}}" class="item--image" />
+         {{#name}}
+            <div class="item--name"><h1>  {{english}}<h1></div>
+        {{/name}}
+        <div class="item--genre"><h2>  {{type}}<h2></div>
+        {{#base}}
+         <div class="item--color"> <h5> HP: {{HP}} <h5></div>
+         <div class="item--color"> <h5> Attack: {{Attack}} <h5></div>
+         <div class="item--color"> <h5> Defense: {{Defense}} <h5></div>
+         <div class="item--color"> <h5> Speed: {{Speed}} <h5></div>
+         <button type="button" class="btn btn-success"><a href="/update/{{id}}">alterar</a></button>
+         <button type="button" class="btn btn-danger"><a href="/api/{{id}}">excluir</a></button>
+        {{/base}}
+    </div>
+{{/pokemons}}
+</div>
+
+{{^pokemons}}
+<div class="no-list">
+        <h2>Nenhum Pokemon Encontrado</h2> 
+    </div>
+{{/pokemons}}    
+
+
+
+{{> partials/footer}}

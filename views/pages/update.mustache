@@ -1,0 +1,42 @@
+{{> partials/header}}
+<div class="section-form">
+   
+                    <div class="form-items">
+                        <h3>Registre um novo pokemon</h3>
+                        <form method="POST" class="requires-validation" enctype="multipart/form-data"  action="/api/update">
+                            <input type="hidden" name="id" value="{{pokemon.id}}"/>
+                            <div class="col-md-12">
+                               <input class="form-control" type="text" name="name" value="{{pokemon.name.english}}" required>
+                            </div>
+                            <div class="col-md-12">
+                               <input class="form-control" type="file" name="file" placeholder="arquivo" >
+                            </div>
+                            <div class="base">
+                                <div class="col-md-2">
+                                    <input class="form-control" type="number" name="HP" value="{{pokemon.base.HP}}" required>
+                                </div>
+                                <div class="col-md-2">
+                                    <input class="form-control" type="number" name="Attack" value="{{pokemon.base.Attack}}" required>
+                                </div>
+                                <div class="col-md-2">
+                                    <input class="form-control" type="number" name="Defense" value="{{pokemon.base.Defense}}" required>
+                                </div>
+                                <div class="col-md-2">
+                                    <input class="form-control" type="number" name="Speed" value="{{pokemon.base.Speed}}" required>
+                                </div>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                            {{#tipo}}
+                                    <input type="checkbox" name="type" class="btn-check" value="{{.}}" id="{{.}}" >
+                                    <label class="btn btn-outline-primary"  for="{{.}}">{{.}}</label>
+                            {{/tipo}}
+                             </div>
+                           
+                            <div class="form-button mt-3">
+                                <button id="submit" type="submit" class="btn btn-primary">Alterar</button>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+          
+{{> partials/footer}}
