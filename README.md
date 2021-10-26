@@ -2,7 +2,7 @@
 - [Link For Project](https://damp-ocean-86592.herokuapp.com/)
 
 ## description
-    O projeto foi desenvolvido como um trabalho da disciplina de banco de dados da universidade UTFPR
+O projeto foi desenvolvido como um trabalho da disciplina de banco de dados da universidade UTFPR
 o desafio era desenvolver uma aplicação que implementasse um [CRUD](https://developer.mozilla.org/pt-BR/docs/Glossary/CRUD) de pokemons
 sem usar um banco de dados para armazenar as informações. Os dados poderiam ser armazenadas em documentos simples como exemplo .txt .csv o arquivo escolhido para 
 dar suporte ao armazenamento e manipulação de dados foi escolhido o formato .json 
@@ -26,6 +26,8 @@ dar suporte ao armazenamento e manipulação de dados foi escolhido o formato .j
 ## Up and Running
 - Install dependencies `yarn (or npm i)`
 - Run `yarn dev (or npm dev)` to run development server  at `http://localhost:3000`
+    yarn dev
+    npm dev
 
 ## Available scripts
 - `yarn start (or npm start)`: Run server in production mode
