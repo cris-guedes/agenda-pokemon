@@ -13,11 +13,7 @@ export class modelPokemon {
     constructor(endereco: string) {
         this.data = JSON.parse(fs.readFileSync(endereco, "utf-8"));
         this.endereco = endereco;
-        /*for (let i = 0; i < this.data.length; i++) {
-             this.data[i].image=("000" + this.data[i].id).slice(-3)+".png"
-           
-        }
-        this.save();*/
+
 
     }
 

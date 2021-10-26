@@ -1,21 +1,15 @@
-import  Router, { Request, response, Response }  from "express";
+import { Router } from "express";
 import  * as pageController  from "../controller/pageController";
-import { uploadHandler } from "../multer";
 
-const route = Router();
+const mainRouters = Router();
 
-route.get("/",pageController.pokeHomePage);
-route.get("/create",pageController.pokeCreate);
-route.get("/update/:id",pageController.pokeUpdate);
-route.get("/search",pageController.search);
-
-
-route.get("/api/save", pageController.save);
-route.get("/api/desfazer", pageController.desfazer)
-route.get("/api/:id", pageController.deletar)
-route.post("/api/create",uploadHandler.single('file'),pageController.create)
-route.post("/api/update",uploadHandler.single('file'),pageController.update)
-route.get("/searchTipo", pageController.searchTipo);
+mainRouters.get("/",pageController.pokeHomePage);
+mainRouters.get("/create",pageController.pokeCreate);
+mainRouters.get("/update/:id",pageController.pokeUpdate);
+mainRouters.get("/search",pageController.search);
 
 
-export {route}
+
+
+
+export default mainRouters;

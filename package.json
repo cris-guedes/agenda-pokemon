@@ -10,7 +10,7 @@
     "tsc":"tsc",
     "start": "node dist/server.js",
     "postinstall": "npm run tsc && copyfiles -u 1 ./src/provider/**/**  dist/",
-    "start:dev": "nodemon -e ts,json,mustache, src/server.ts"
+    "dev": "nodemon -e ts,json,mustache, src/server.ts"
   },
   "keywords": [],
   "author": "",
